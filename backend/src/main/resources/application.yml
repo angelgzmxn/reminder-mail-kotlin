@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: TaskServerKotlin
+  datasource:
+    url: jdbc:sqlite:file:task_server_kotlin?mode=memory&cache=shared
+    driver-class-name: org.sqlite.JDBC
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.community.dialect.SQLiteDialect
+        format_sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mainangelguzman@gmail.com
+    password: rtlxzwrpwvsyrdau
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:this-is-a-dev-secret-must-be-at-least-32-bytes}
+    expiration-minutes: ${JWT_EXPIRATION_MINUTES:30}
+  mail:
+    from: ${MAIL_FROM:no-reply@remindermail.com}
+  reminder:
+    scheduler:
+      fixed-delay-ms: ${REMINDER_SCHEDULER_DELAY_MS:60000}

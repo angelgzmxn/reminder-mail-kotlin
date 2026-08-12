@@ -1,0 +1,298 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: gray;
+    font-family: Arial, sans-serif;
+    padding: 40px 0;
+}
+
+.contenedor-profile {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    padding: 10px 16px;
+    background-color: #111111;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor-reminders {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 12px;
+    background-color: #111111;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.title h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 26px;
+}
+
+.title-botones {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-enlace {
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    background-color: #444444;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-enlace:hover {
+    background-color: #333333;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+#btn-crear-recordatorio {
+    padding: 11px 14px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#btn-crear-recordatorio:hover {
+    background-color: #0056b3;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    margin: 10px 0 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 12px;
+    color: gray;
+    background-color: white;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.formulario textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.form-botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.btn {
+    border: none;
+    border-radius: 6px;
+    padding: 13px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-guardar {
+    flex: 1;
+    color: white;
+    background-color: #007bff;
+}
+
+.btn-guardar:hover {
+    background-color: #0056b3;
+}
+
+.btn-cancelar {
+    color: white;
+    background-color: #444444;
+}
+
+.btn-cancelar:hover {
+    background-color: #333333;
+}
+
+.mensaje {
+    min-height: 20px;
+    margin: 0 0 14px;
+    color: #aaaaaa;
+    font-size: 14px;
+    text-align: center;
+}
+
+.mensaje.error {
+    color: #ff6b6b;
+}
+
+.mensaje.exito {
+    color: #5be28b;
+}
+
+.lista-recordatorios {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tarjeta-recordatorio {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+}
+
+.info-recordatorio {
+    min-width: 0;
+}
+
+.info-recordatorio h2 {
+    margin: 0 0 8px;
+    color: #ffffff;
+    font-size: 18px;
+    overflow-wrap: anywhere;
+}
+
+.info-recordatorio p {
+    margin: 0;
+    color: #aaaaaa;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.meta-recordatorio {
+    margin-top: 12px;
+    color: #bdbdbd;
+    font-size: 12px;
+}
+
+.acciones-recordatorio {
+    display: flex;
+    flex-shrink: 0;
+    gap: 8px;
+}
+
+.btn-accion {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn-editar {
+    color: #111111;
+    background-color: #ffc107;
+}
+
+.btn-editar:hover {
+    background-color: #e0a800;
+}
+
+.btn-borrar {
+    color: white;
+    background-color: #dc3545;
+}
+
+.btn-borrar:hover {
+    background-color: #c82333;
+}
+
+.estado-vacio {
+    margin: 0;
+    padding: 20px;
+    color: #aaaaaa;
+    border: 1px dashed #555555;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.oculto {
+    display: none;
+}
+
+@media (max-width: 560px) {
+    body {
+        align-items: flex-start;
+        padding: 14px;
+    }
+
+    .contenedor-reminders {
+        padding: 25px;
+    }
+
+    .title,
+    .tarjeta-recordatorio {
+        flex-direction: column;
+    }
+
+    #btn-crear-recordatorio,
+    .acciones-recordatorio {
+        width: 100%;
+    }
+
+    .btn-accion {
+        flex: 1;
+    }
+}

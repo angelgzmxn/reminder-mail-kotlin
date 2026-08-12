@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reminders</title>
+    <link rel="stylesheet" href="reminders.css">
+</head>
+<body>
+<div class="contenedor-profile">
+    <div class="profile">
+        <a class="btn-enlace" href="../profile/profile.html">Mi perfil</a>
+    </div>
+
+    <div class="contenedor-reminders">
+        <div class="title">
+            <h1>Mis recordatorios</h1>
+            <button id="btn-crear-recordatorio" type="button"> Crear recordatorio</button>
+        </div>
+
+        <p id="mensaje" class="mensaje" aria-live="polite"></p>
+
+        <form id="form-recordatorio" class="formulario oculto">
+            <input id="recordatorio-id" type="hidden">
+
+            <label for="titulo">Título</label>
+            <input
+                    id="titulo"
+                    type="text"
+                    maxlength="150"
+                    placeholder="Ingresa un titulo para el recordatorio"
+                    required
+            >
+
+            <label for="mensaje-recordatorio">Mensaje</label>
+            <textarea
+                    id="mensaje-recordatorio"
+                    rows="3"
+                    placeholder="Este es el mensaje que llegara al correo"
+                    required
+            ></textarea>
+
+            <label for="fecha-envio">Fecha y hora de envío</label>
+            <input
+                    id="fecha-envio"
+                    type="datetime-local"
+                    required
+            >
+
+            <div class="form-botones">
+                <button id="btn-guardar-recordatorio" class="btn btn-guardar" type="submit">
+                    Guardar
+                </button>
+                <button id="btn-cancelar-recordatorio" class="btn btn-cancelar" type="button">
+                    Cancelar
+                </button>
+            </div>
+        </form>
+
+        <section id="lista-recordatorios" class="lista-recordatorios" aria-live="polite"></section>
+    </div>
+</div>
+
+<script src="reminders.js"></script>
+</body>
+</html>

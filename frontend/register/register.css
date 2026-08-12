@@ -1,0 +1,78 @@
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    font-family: Arial, sans-serif;
+}
+
+#contenedor-register {
+    background-color: #111111;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#contenedor-register h2 {
+    margin: 0 0 28px 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 26px;
+}
+
+label {
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    background-color: white;
+    color: gray;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#button-register {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 8px;
+    box-sizing: border-box;
+    transition: background-color 0.2s;
+}
+
+#button-register:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el ratón */
+}
+
+#tologin {
+    color: #aaaaaa;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    width: auto;
+}

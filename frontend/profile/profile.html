@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi perfil</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<div class="contenedor-profile">
+    <div class="title">
+        <h1>Mi perfil</h1>
+        <div class="title-botones">
+            <a class="btn-enlace" href="../reminders/reminders.html">Mis recordatorios</a>
+            <button id="btn-cerrar-sesion" type="button">Cerrar sesión</button>
+        </div>
+    </div>
+
+    <p id="mensaje" class="mensaje" aria-live="polite"></p>
+
+    <section id="tarjeta-perfil" class="tarjeta-info oculto">
+        <h2>Datos de la cuenta</h2>
+        <p><strong>Nombre:</strong> <span id="info-nombre"></span></p>
+        <p><strong>Correo:</strong> <span id="info-correo"></span></p>
+        <p><strong>Rol:</strong> <span id="info-rol"></span></p>
+        <p><strong>Estado:</strong> <span id="info-activo"></span></p>
+        <p><strong>Miembro desde:</strong> <span id="info-creado"></span></p>
+        <button id="btn-editar-perfil" class="btn btn-guardar" type="button">Editar perfil</button>
+    </section>
+
+    <form id="form-perfil" class="formulario oculto">
+        <label for="perfil-nombre">Nombre completo</label>
+        <input id="perfil-nombre" type="text" maxlength="150" required>
+
+        <label for="perfil-correo">Correo</label>
+        <input id="perfil-correo" type="email" required>
+
+        <div class="form-botones">
+            <button id="btn-guardar-perfil" class="btn btn-guardar" type="submit">Guardar cambios</button>
+            <button id="btn-cancelar-perfil" class="btn btn-cancelar" type="button">Cancelar</button>
+        </div>
+    </form>
+
+    <section class="seccion">
+        <div class="seccion-titulo">
+            <h2>Cambiar contraseña</h2>
+            <button id="btn-abrir-password" class="btn-enlace" type="button">Cambiar contraseña</button>
+        </div>
+        <form id="form-password" class="formulario oculto">
+            <label for="password-actual">Contraseña actual</label>
+            <input id="password-actual" type="password" required>
+
+            <label for="password-nueva">Nueva contraseña</label>
+            <input id="password-nueva" type="password" minlength="8" required>
+
+            <label for="password-confirmar">Confirmar nueva contraseña</label>
+            <input id="password-confirmar" type="password" minlength="8" required>
+
+            <div class="form-botones">
+                <button id="btn-guardar-password" class="btn btn-guardar" type="submit">Cambiar contraseña</button>
+                <button id="btn-cancelar-password" class="btn btn-cancelar" type="button">Cancelar</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="panel-admin" class="seccion oculto">
+        <h2>Panel de administración</h2>
+
+        <h3>Usuarios</h3>
+        <div id="lista-usuarios" class="lista-admin" aria-live="polite"></div>
+
+        <h3>Recordatorios de todos los usuarios</h3>
+        <div id="lista-recordatorios-admin" class="lista-admin" aria-live="polite"></div>
+    </section>
+</div>
+
+<script src="profile.js"></script>
+</body>
+</html>
