@@ -98,8 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return etiquetas[status] || status;
     }
 
-    // ---------- Perfil (ver / editar) ----------
-
     function pintarPerfil(perfil) {
         infoNombre.textContent = perfil.fullName;
         infoCorreo.textContent = perfil.email;
@@ -204,7 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btnCancelarPerfil.addEventListener("click", cerrarEdicionPerfil);
 
-    // ---------- Cambio de contraseña ----------
 
     function abrirFormularioPassword() {
         limpiarMensaje();
@@ -372,8 +369,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         renderizarRecordatoriosAdmin(await response.json());
     }
-
-    // ---------- Cerrar sesión ----------
 
     btnCerrarSesion.addEventListener("click", redirigirALogin);
 

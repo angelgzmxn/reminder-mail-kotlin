@@ -6,11 +6,6 @@ import org.springframework.mail.SimpleMailMessage
 import org.springframework.mail.javamail.JavaMailSender
 import org.springframework.stereotype.Service
 
-/**
- * Reemplaza al antiguo modulo de notificaciones por WhatsApp/Twilio.
- * Se encarga unicamente de armar y enviar el correo; no conoce reglas
- * de negocio de los recordatorios (esas viven en ReminderSchedulerService).
- */
 @Service
 class EmailService(
     private val mailSender: JavaMailSender,

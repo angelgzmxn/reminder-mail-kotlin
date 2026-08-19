@@ -165,7 +165,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const acciones = document.createElement("div");
             acciones.className = "acciones-recordatorio";
 
-            // Un recordatorio ya enviado o fallido no se puede editar (el backend lo rechaza con 409).
             if (recordatorio.status === "PENDING") {
                 acciones.append(
                     crearBoton("Editar", "btn-editar", () => abrirFormulario(recordatorio))

@@ -8,11 +8,6 @@ import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 import java.time.LocalDateTime
 
-/**
- * Reemplaza al poller que antes disparaba mensajes de WhatsApp via Twilio.
- * Cada cierto intervalo revisa los recordatorios PENDING cuya hora ya llego
- * y le pide a EmailService que envie el correo.
- */
 @Service
 class ReminderSchedulerService(
     private val reminderRepository: ReminderRepository,
@@ -21,7 +16,6 @@ class ReminderSchedulerService(
 
     private val logger = LoggerFactory.getLogger(ReminderSchedulerService::class.java)
 
-    // Corre cada 60 segundos (configurable via app.reminder.scheduler.fixed-delay-ms)
     @Transactional
     @Scheduled(fixedDelayString = "\${app.reminder.scheduler.fixed-delay-ms:60000}")
     fun dispatchDueReminders() {

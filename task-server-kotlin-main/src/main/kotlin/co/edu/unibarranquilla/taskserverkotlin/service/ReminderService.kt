@@ -47,7 +47,6 @@ class ReminderService(
         val reminder = reminderRepository.findByIdAndOwnerId(id, requireNotNull(owner.id))
             ?: throw ResourceNotFoundException("Reminder not found")
 
-        // Un recordatorio ya enviado no se puede editar, solo consultar o borrar.
         if (reminder.status == ReminderStatus.SENT) {
             throw ReminderAlreadySentException("Reminder was already sent and can no longer be edited")
         }

@@ -9,7 +9,6 @@ interface ReminderRepository : JpaRepository<Reminder, Long> {
     fun findAllByOwnerId(ownerId: Long): List<Reminder>
     fun findByIdAndOwnerId(id: Long, ownerId: Long): Reminder?
 
-    // Usada por el scheduler: trae los recordatorios pendientes cuya hora ya llego
     fun findAllByStatusAndScheduledAtLessThanEqual(
         status: ReminderStatus,
         scheduledAt: LocalDateTime
